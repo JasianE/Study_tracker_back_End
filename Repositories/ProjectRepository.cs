@@ -38,7 +38,7 @@ namespace back_end.Repositories
         public async Task<Project?> GetById(int id)
         {
             return await _context.Project.FirstOrDefaultAsync(x => x.Id == id);
-
         }
+        
     }
 }

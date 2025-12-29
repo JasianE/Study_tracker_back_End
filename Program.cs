@@ -15,6 +15,8 @@ builder.Services.AddDbContext<ApplicationDBContext>(options =>
     //Searches appsetting development json
 });
 builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
+builder.Services.AddScoped<IDayRepository, DayRepository>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
