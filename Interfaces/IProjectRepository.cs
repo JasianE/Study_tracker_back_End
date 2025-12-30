@@ -12,5 +12,6 @@ namespace back_end.Interfaces
         Task<Project?> GetById(int id);
 
         Task<Project?> Delete(int id);
+        Task<bool> Exists(int id);
     }
 }

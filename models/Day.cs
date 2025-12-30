@@ -7,7 +7,7 @@ namespace back_end.models
 {
     public class Day
     {
-        public int? ProjectId {get; set;} // forms relationship in db thru entity framework
+        public int ProjectId {get; set;} // forms relationship in db thru entity framework
 
         public Project? Project {get; set;}
         public int Id { get; set; }

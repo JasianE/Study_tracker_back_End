@@ -30,6 +30,11 @@ namespace back_end.Repositories
             return project;
         }
 
+        public async Task<bool> Exists(int id)
+        {
+            return await _context.Project.AnyAsync(s => s.Id == id);
+        }
+
         public async Task<List<Project>> GetAllAsync()
         {
             return await _context.Project.ToListAsync();
@@ -39,6 +44,7 @@ namespace back_end.Repositories
         {
             return await _context.Project.FirstOrDefaultAsync(x => x.Id == id);
         }
+
         
     }
 }

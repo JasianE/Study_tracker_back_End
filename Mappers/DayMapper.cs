@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using back_end.DTOs;
 using back_end.models;
+using Microsoft.CodeAnalysis;
 
 namespace back_end.Mappers
 {
@@ -14,9 +15,17 @@ namespace back_end.Mappers
             return new NewDayDTO
             {
                 Id = dayModel.Id,
-                ProjectId = dayModel.ProjectId,
                 TimeSpent = dayModel.TimeSpent,
-                When = dayModel.When,
+            };
+        }
+
+        public static Day ToDayFromNewDayDto(this NewDayDTO dayDTO, int ProjectId)
+        {
+            return new Day
+            {
+                Id= dayDTO.Id,
+                TimeSpent=dayDTO.TimeSpent,
+                ProjectId=ProjectId
             };
         }
     }

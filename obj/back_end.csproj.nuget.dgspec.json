@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\junch\\downloads\\projects\\study_tracker\\back_end\\back_end.csproj": {}
+    "C:\\Users\\junch\\Downloads\\Projects\\study_tracker\\back_end\\back_end.csproj": {}
   },
   "projects": {
-    "C:\\Users\\junch\\downloads\\projects\\study_tracker\\back_end\\back_end.csproj": {
+    "C:\\Users\\junch\\Downloads\\Projects\\study_tracker\\back_end\\back_end.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\junch\\downloads\\projects\\study_tracker\\back_end\\back_end.csproj",
+        "projectUniqueName": "C:\\Users\\junch\\Downloads\\Projects\\study_tracker\\back_end\\back_end.csproj",
         "projectName": "back_end",
-        "projectPath": "C:\\Users\\junch\\downloads\\projects\\study_tracker\\back_end\\back_end.csproj",
+        "projectPath": "C:\\Users\\junch\\Downloads\\Projects\\study_tracker\\back_end\\back_end.csproj",
         "packagesPath": "C:\\Users\\junch\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\junch\\downloads\\projects\\study_tracker\\back_end\\obj\\",
+        "outputPath": "C:\\Users\\junch\\Downloads\\Projects\\study_tracker\\back_end\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,6 +50,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[9.0.11, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.7, )"
@@ -65,6 +69,10 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[9.0.11, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.4, )"
             },
             "Swashbuckle.AspNetCore.SwaggerUI": {
               "target": "Package",

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using back_end.DTOs;
 using back_end.models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,7 +18,7 @@ namespace back_end.Interfaces
         // nah
         // For stats it would filter through them all then, looking for a specific date
 
-        Task<Day> AddDay(Day day);
+        Task<Day> AddDayAsync(Day day);
         Task<List<Day>> GetDaysAsync();
         
     }
