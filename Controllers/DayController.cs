@@ -25,10 +25,10 @@ namespace back_end.Controllers
             _projectRepo = projectRepo;
         }
 
-        [HttpPost("{stockId}")]
+        [HttpPost("{projectId}")]
         public async Task<IActionResult> CreateDay([FromRoute] int projectId, [FromBody] NewDayDTO day)
         {
-            if(!await _projectRepo.Exists(projectId))
+            if(_projectRepo.Exists(projectId) != null)
             {
                 return BadRequest("Not found");
             } 
@@ -37,6 +37,12 @@ namespace back_end.Controllers
             await _dayRepo.AddDayAsync(dayModel);
             return Ok("");
 
+        }
+        [HttpGet]
+        public async Task<IActionResult> GetDays()
+        {
+            var days = await _dayRepo.GetDaysAsync();
+            return Ok(days);
         }
     }
 }

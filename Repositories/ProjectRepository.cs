@@ -32,6 +32,7 @@ namespace back_end.Repositories
 
         public async Task<bool> Exists(int id)
         {
+            
             return await _context.Project.AnyAsync(s => s.Id == id);
         }
 

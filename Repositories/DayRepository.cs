@@ -24,7 +24,7 @@ namespace back_end.Repositories
 
         public async Task<Day> AddDayAsync(Day day)
         {
-            await _context.AddAsync(day);
+            await _context.Day.AddAsync(day);
             await _context.SaveChangesAsync();
 
             return day;
