@@ -38,12 +38,17 @@ namespace back_end.Repositories
 
         public async Task<List<Project>> GetAllAsync()
         {
-            return await _context.Project.ToListAsync();
+            return await _context.Project
+            .Include(p => p.Days)
+            .ToListAsync();
+          
         }
 
         public async Task<Project?> GetById(int id)
         {
-            return await _context.Project.FirstOrDefaultAsync(x => x.Id == id);
+            return await _context.Project
+            .Include(p => p.Days)
+            .FirstOrDefaultAsync(x => x.Id == id);
         }
 
         

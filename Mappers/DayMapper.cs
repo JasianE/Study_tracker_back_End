@@ -23,7 +23,6 @@ namespace back_end.Mappers
         {
             return new Day
             {
-                Id= dayDTO.Id,
                 TimeSpent=dayDTO.TimeSpent,
                 ProjectId=ProjectId
             };

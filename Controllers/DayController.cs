@@ -28,12 +28,15 @@ namespace back_end.Controllers
         [HttpPost("{projectId}")]
         public async Task<IActionResult> CreateDay([FromRoute] int projectId, [FromBody] NewDayDTO day)
         {
-            if(_projectRepo.Exists(projectId) != null)
+            var projectExists = await _projectRepo.Exists(projectId);
+            if(projectExists == false)
             {
+                
                 return BadRequest("Not found");
             } 
 
             var dayModel = day.ToDayFromNewDayDto(projectId);
+            
             await _dayRepo.AddDayAsync(dayModel);
             return Ok("");
 

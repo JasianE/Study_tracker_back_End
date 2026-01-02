@@ -26,7 +26,8 @@ namespace back_end.Controllers
 
         public async Task<IActionResult> GetAll()
         {
-            var Projects = await _projectRepo.GetAllAsync();
+            var Projects = await _projectRepo
+            .GetAllAsync();
 
             return Ok(Projects);
         }
